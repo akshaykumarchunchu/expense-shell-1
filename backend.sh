@@ -55,9 +55,7 @@ VALIDATE $? "install mysql in backend"
 # mysql -h db.akshaydaws-78s.online -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>LOGFILE
 # VALIDATE $? "Schema Loading"
 
-mysql -h db.akshaydaws-78s.online -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
- 
-#ysql -h db.akshaydaws-78s.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOGFILE
+mysql -h db.akshaydaws-78s.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOGFILE
 VALIDATE $? "Schema loading"
 
 systemctl restart backend &>>$LOGFILE
