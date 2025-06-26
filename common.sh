@@ -21,11 +21,11 @@ VALIDATE(){
 }
 
 check_root(){
-if [ $? -ne 0 ]
-then 
-    echo "You're not a Superuser"
-    exit 1
-else    
-    echo "You're a Superuser"
-f
-}
+    if [ $? -ne 0 ]
+    then 
+        echo "You're not a Superuser"
+        exit 1
+    else    
+        echo "You're a Superuser"
+    fi
+    }
